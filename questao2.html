@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Atividade3</title>
+<link href="./css/estilo.css" rel="stylesheet"/>
+<script type="text/javascript">
+
+    function enviar() {
+        var nome = document.contato.nome.value;
+        var email = document.contato.email.value;
+        var mensagem = document.contato.mensagem.value;
+
+        if ((nome == null) || (nome == "")){
+        alert("O campo nome é obrigatório!");
+        } else if ((email == null) || (email == "")){
+        alert("O campo email é obrigatório!");
+        } else if ((mensagem == null) || (mensagem == "")){
+        alert("O campo mensagem é obrigatório!");
+        
+        } else {
+            alert(`Enviado!
+            NOME: ${nome}
+            EMAIL: ${email}
+            MENSAGEM: ${mensagem}
+            `)
+
+        }
+
+    }
+
+    function gerardoc() {
+        var nome = document.maiordeidade.nome.value;
+        var idade = document.maiordeidade.idade.value;
+
+        if ((nome == null) || (nome == "")){
+        alert("O campo nome é obrigatório!");
+        } else if ((idade == null) || (idade == "")){
+        alert("O campo idade é obrigatório!");
+        } else if (idade < 18) {
+        alert("Você tem menos de 18 anos");
+        
+
+        } else {
+            alert(`Documento gerado!
+            NOME: ${nome}
+            IDADE: ${idade}
+            `)
+
+        }
+
+    }
+</script>
+</head>
+<body>
+<header>
+    
+    <nav>
+        <a href="index.html">Questão 1</a> | 
+        <a href="questao2.html">Questão 2</a> | 
+       
+    </nav>
+
+</header>
+<main>
+    <form name="contato" method="post"> 
+    <h1>Contato</h1>
+    <div class="form">
+    <label>Nome</label>    
+    <input type="text" name="nome">
+    </div>
+    
+    <div class="form">
+    <label>Email</label>    
+    <input type="text" name="email">
+    </div>    
+
+    <div class="form">
+        <label>Mensagem</label>    
+        <textarea type="text" name="mensagem"></textarea>
+        </div>  
+
+    <input type="button" onclick="enviar()" value="Enviar">
+
+</form>
+
+<form name="maiordeidade" method="post"> 
+    <h1>Gerar documento</h1>
+    <div class="form">
+    <label>Nome</label>    
+    <input type="text" name="nome">
+    </div>
+    
+    <div class="form">
+    <label>Idade</label>    
+    <input type="text" name="idade">
+    </div>    
+    
+    <input type="button" onclick="gerardoc()" value="Verificar">
+
+</form>
+
+</main>
+    
+</body>
+</html>

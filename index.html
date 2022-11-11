@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Atividade3</title>
+<link href="./css/estilo.css" rel="stylesheet"/>
+<script type="text/javascript">
+
+    function salvar() {
+        var nome = document.contato.nome.value;
+        var datadenascimento = document.contato.datadenascimento.value;
+        var email = document.contato.email.value;
+        var endereco = document.contato.endereco.value;
+        var cidade = document.contato.cidade.value;
+        var cep = document.contato.cep.value;
+
+        if ((nome == null) || (nome == "")){
+        alert("O campo nome é obrigatório!");
+        } else if ((datadenascimento == null) || (datadenascimento == "")){
+        alert("O campo data de nascimento é obrigatório!");
+        } else if ((email == null) || (email == "")){
+        alert("O campo email é obrigatório!");
+        } else if ((endereco == null) || (endereco == "")){
+        alert("O campo endereço é obrigatório!");
+        } else if ((cidade == null) || (cidade == "")){
+        alert("O campo cidade é obrigatório!");
+        } else if ((cep == null) || (cep == "")){
+        alert("O campo cep é obrigatório!");    
+
+        } else {
+            alert(`Salvo com Sucesso!
+            NOME: ${nome}
+            NASCIMENTO: ${datadenascimento}
+            EMAIL: ${email}
+            ENDEREÇO: ${endereco}
+            CIDADE: ${cidade}
+            CEP: ${cep}
+            `)
+
+        }
+
+
+
+
+    }
+</script>
+</head>
+<body>
+<header>
+    
+    <nav>
+        <a href="index.html">Questão 1</a> | 
+        <a href="questao2.html">Questão 2</a> | 
+       
+    </nav>
+
+</header>
+<main>
+    <form name="contato" method="post"> 
+    
+    <div class="form">
+    <label>Nome</label>    
+    <input type="text" name="nome">
+    </div>
+    
+    <div class="form">
+    <label>Data de nascimento</label>    
+    <input type="text" name="datadenascimento">
+    </div>    
+
+    <div class="form">
+    <label>Email</label>    
+    <input type="text" name="email">
+    </div>    
+
+    <div class="form">
+    <label>Endereço</label>    
+    <input type="text" name="endereco">
+    </div>    
+
+    <div class="form">
+    <label>Cidade</label>    
+    <input type="text" name="cidade">
+    </div>    
+
+    <div class="form">
+    <label>CEP</label>    
+    <input type="text" name="cep">
+    </div>
+
+    <input type="button" onclick="salvar()" value="Salvar">
+
+</form>
+</main>
+    
+</body>
+</html>

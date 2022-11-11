@@ -1,0 +1,12 @@
+body { background: #fff6ec; font-family: Arial, Helvetica, sans-serif;}
+header { display:flexbox; text-align: center; padding: 20px;}
+
+
+nav { color: #824500; }
+nav a {color: #824500; text-decoration: none; padding:3px ;}
+nav a:hover {color: #fff6ec; background: #824500; border-radius: 5px;}
+
+main {text-align: center}
+
+.form {margin: 10px;}
+
